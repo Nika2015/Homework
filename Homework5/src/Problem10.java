@@ -14,10 +14,10 @@ class Problem10
         int k = scanner.nextInt();
         int sum;
         for (int i = 0; i < n; i++) {
-            sum = 1;
-            for (int j = i+1; j < n; j++) {  if(num[i]==num[j]){  sum=sum+1;}}
-            if (sum== k){
-                System.out.println(num[i]);}}}}
+            sum = 0;
+            for (int j = 0; j < n; j++) {  if(num[i]==num[j]){if( j<i){ break;} else {sum=sum+1;}}
+            if (j+1==n && sum== k){
+                System.out.println(num[i]);}}}}}
 
 
 
